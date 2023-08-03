@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Brasil Crucera",
+    "description": "Bolsa de café 250gr.",
+    "price": 550,
+    "thumbnail": "bolsa-brasil.jpg",
+    "code": 5,
+    "stock": 50,
+    "id": 1
+  },
+  {
+    "title": "Etiopía Najá",
+    "description": "Bolsa de café 250gr.",
+    "price": 550,
+    "thumbnail": "bolsa-etiopia.jpg",
+    "code": 10,
+    "stock": 40,
+    "id": 2
+  },
+  {
+    "title": "Guatemala GTA",
+    "description": "Bolsa de café 250gr.",
+    "price": 700,
+    "thumbnail": "bolsa-guate.jpg",
+    "code": 15,
+    "stock": 30,
+    "id": 3
+  },
+  {
+    "title": "Colombia Supremo",
+    "description": "Bolsa de café 250gr.",
+    "price": 600,
+    "thumbnail": "bolsa-colombia.jpg",
+    "code": 20,
+    "stock": 35,
+    "id": 4
+  },
+  {
+    "title": "Kenia AA",
+    "description": "Bolsa de café 250gr.",
+    "price": 650,
+    "thumbnail": "bolsa-kenia.jpg",
+    "code": 25,
+    "stock": 28,
+    "id": 5
+  },
+  {
+    "title": "Perú Chanchamayo",
+    "description": "Bolsa de café 250gr.",
+    "price": 580,
+    "thumbnail": "bolsa-peru.jpg",
+    "code": 30,
+    "stock": 42,
+    "id": 6
+  },
+  {
+    "title": "Costa Rica Tarrazú",
+    "description": "Bolsa de café 250gr.",
+    "price": 720,
+    "thumbnail": "bolsa-costa-rica.jpg",
+    "code": 35,
+    "stock": 20,
+    "id": 7
+  },
+  {
+    "title": "Honduras SHG",
+    "description": "Bolsa de café 250gr.",
+    "price": 500,
+    "thumbnail": "bolsa-honduras.jpg",
+    "code": 40,
+    "stock": 55,
+    "id": 8
+  },
+  {
+    "title": "Nicaragua Jinotega",
+    "description": "Bolsa de café 250gr.",
+    "price": 540,
+    "thumbnail": "bolsa-nicaragua.jpg",
+    "code": 45,
+    "stock": 37,
+    "id": 9
+  },
+  {
+    "title": "India Monsooned Malabar",
+    "description": "Bolsa de café 250gr.",
+    "price": 630,
+    "thumbnail": "bolsa-india.jpg",
+    "code": 50,
+    "stock": 32,
+    "id": 10
+  },
+  {
+    "query": "\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ",
+    "id": 11
+  },
+  {
+    "id": 12
+  },
+  {
+    "id": 13
+  }
+]

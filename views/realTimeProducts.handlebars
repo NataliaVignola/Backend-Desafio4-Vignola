@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Productos en Tiempo Real</title>
+</head>
+<body>
+    <h1>Lista de Productos en Tiempo Real</h1>
+    <ul>
+        {{#each products}}
+        <li>{{this.title}} - {{this.price}}</li>
+        {{/each}}
+    </ul>
+
+    <!-- Agregar el script para la conexión WebSocket -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        // Conectar al servidor WebSocket
+        const socket = io();
+
+        // Escuchar el evento 'productoCreado' y actualizar la lista
+        socket.on('productoCreado', (newProduct) => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${newProduct.title} - ${newProduct.price}`;
+            document.querySelector('ul').appendChild(listItem);
+        });
+
+        // Escuchar el evento 'productoActualizado' y actualizar la lista (opcional)
+        socket.on('productoActualizado', (productId) => {
+            // Actualizar el elemento en la lista con el producto actualizado
+        });
+
+        // Escuchar el evento 'productoEliminado' y eliminar el elemento de la lista (opcional)
+        socket.on('productoEliminado', (productId) => {
+            // Eliminar el elemento de la lista con el producto eliminado
+        });
+    </script>
+</body>
+</html>
